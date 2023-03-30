@@ -68,14 +68,14 @@ jobs:
       with:
         ref: ${{ github.ref }}
     - name: Publish Threat Bus Docker Image
-      uses: elgohr/Publish-Docker-Github-Action@3.04
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: tenzir/threatbus
         username: ${{ secrets.DOCKERHUB_USER }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         tags: latest,${{ github.sha }}
     - name: Publish vast-threatbus Docker Image
-      uses: elgohr/Publish-Docker-Github-Action@3.04
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: tenzir/vast-threatbus
         username: ${{ secrets.DOCKERHUB_USER }}
@@ -83,7 +83,7 @@ jobs:
         dockerfile: docker/vast-threatbus/Dockerfile
         tags: latest,${{ github.sha }}
     - name: Publish stix-shifter-threatbus Docker Image
-      uses: elgohr/Publish-Docker-Github-Action@3.04
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: tenzir/stix-shifter-threatbus
         username: ${{ secrets.DOCKERHUB_USER }}
@@ -91,7 +91,7 @@ jobs:
         dockerfile: docker/stix-shifter-threatbus/Dockerfile
         tags: latest,${{ github.sha }}
     - name: Publish suricata-threatbus Docker Image
-      uses: elgohr/Publish-Docker-Github-Action@3.04
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: tenzir/suricata-threatbus
         username: ${{ secrets.DOCKERHUB_USER }}
